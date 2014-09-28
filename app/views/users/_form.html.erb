@@ -1,0 +1,19 @@
+<h3>USER form</h3>
+
+<%= form_for @user do |f| %>
+<%#= form_for :user, url: users_path do |f| %>
+
+  <div class="field">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %>
+  </div>
+
+  <div class="field">
+  	<%= f.label :email %><br>
+  	<%= f.email_field :email %>
+  </div>
+  <div class="actions">
+  	<%= f.submit %>
+  </div>
+
+<% end %>

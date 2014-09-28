@@ -1,0 +1,16 @@
+<h1> address </h1>
+<p>
+  <strong>NUMBER:</strong>
+  <%= @address.number %>
+</p>
+<p>
+  <strong>STREET:</strong>
+  <%= @address.street %>
+</p>
+<p>
+  <strong>CITY:</strong>
+  <%= @address.city %>
+</p>
+
+	<%= flash[:notice] if flash[:notice] %>
+	<%= flash[:alert] if flash[:alert] %>

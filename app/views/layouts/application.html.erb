@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class02homework</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	  <header id="flash-msg" class="">
+    <%= flash[:notice] if flash[:notice] %>
+    <%= flash[:alert] if flash[:alert] %>
+
+	<h4>Hello: <%= current_user.fullname if current_user %></h4>
+
+	<nav>
+		<ul>
+			<li><%= link_to "Home", root_path %></li>
+		
+		<li><%= link_to "Users", users_path %></li>
+		<li><%= link_to "Sign up", new_user_path %></li>
+        <% unless session[:user_id] %>
+		<li><%= link_to "Sign in", new_session_path %></li></ul>
+		<% else %>
+		<li><%= link_to "Sign out", session_path(session[:user_id]), method: :delete %></li>
+		<% end %>
+		<li><%= link_to "Posts", posts_path %></li>
+	</nav>
+
+
+
+
+<%= yield %>
+
+<%= link_to 'new post', new_post_path %><br>
+<%= link_to 'show post', posts_path %><br>
+<%= link_to 'posts', posts_path %><br>
+
+<br><br><br>
+
+<br><br>
+
+<%#= link_to 'new user', new_user_path %><br>
+<%#= link_to 'show user', users_path %><br>
+<%#= link_to 'users', users_path %><br>
+<br>
+<%#= link_to 'new address', new_address_path %><br>
+<%#= link_to 'show address', addresses_path %><br>
+<%#= link_to 'addresses', addresses_path %><br> -->
+
+</body>
+</html>

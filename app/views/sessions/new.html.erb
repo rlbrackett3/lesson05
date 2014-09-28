@@ -1,0 +1,16 @@
+<h2>SIGN IN FORM</h2>
+<%= form_tag sessions_path do %>
+	<fieldset>
+		<div class="fields">
+			<%= label_tag :fullname %><%= text_field_tag :fullname, params[:fullname] %>
+		
+		<br>
+		
+			<%= label_tag :email %><%= text_field_tag :email, params[:email] %>
+		</div>
+
+		<div class="actions">
+			<%= submit_tag "Sign in", id: "sign-in", name: "sign-in", class: "form_submit", disabled: false, disable_with: "Please wait..."%>
+		</div>
+	</fieldset>
+<% end %>	

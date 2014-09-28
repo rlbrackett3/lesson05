@@ -1,0 +1,27 @@
+<!-- 
+<table>
+	<tr>
+		<th>TITLE:</th>
+		<th>TEXT:</th>
+	</tr>
+ <%# @post.each do |a|%>
+	<tr>
+		<td><%#= a.title %></td>
+		<td><%#= a.text %></td>
+		<td><%#= link_to("Delete Post", post_path(a), method: :delete) %></td>
+
+	</tr>
+	
+ <%# end %>
+</table> -->
+
+<ul>
+  <% @post.each do |post| %>
+    <li>
+      <%= link_to post.title, post_path(post) %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to "Delete post", post_path(post), method: :delete %>&nbsp;&nbsp;&nbsp;
+      <%= link_to("Edit post", edit_post_path(post)) %>
+    </li>
+    
+  <% end %>
+</ul> 

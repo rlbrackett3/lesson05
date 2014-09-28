@@ -1,0 +1,38 @@
+<!-- <table>
+	  <tr>
+	    <th>Fullname:</th>
+	    
+	    <th>Email:</th>
+	   
+	  </tr> 
+
+	  <%# @user.each do |a| %>
+	    <tr>
+
+	      <td><%#= a.fullname %></td>
+	      
+	      <td><%#= a.email %></td>
+
+	      <td><%#= link_to("Delete User", user_path(a), method: :delete) %>
+	      <td><%#= link_to("Edit user", edit_user_path(a)) %></td>	
+	      </td>
+
+	    </tr>
+	  <%# end %>
+
+</table> -->	  
+
+	<%#= flash[:notice] if flash[:notice] %>
+	<%#= flash[:alert] if flash[:alert] %>
+
+	 
+<ul>
+  <% @user.each do |user| %>
+    <li>
+      <%= link_to user.fullname, user_path(user) %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to "Delete User", user_path(user), method: :delete %>&nbsp;&nbsp;&nbsp;
+      <%= link_to("Edit user", edit_user_path(user)) %>
+    </li>
+    
+  <% end %>
+</ul> 

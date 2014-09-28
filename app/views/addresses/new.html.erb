@@ -1,0 +1,17 @@
+<%= form_for :address, url: addresses_path do |f| %>
+	<div>
+		<%= f.label :number %>:<br>
+		<%= f.text_field :number %>
+	</div>
+	<div>
+	    <%= f.label :street %>:<br>
+		<%= f.text_field :street %>
+	<div>
+	<div>
+	    <%= f.label :city %>:<br>
+		<%= f.text_field :city %>
+	<div>		
+        <%= f.submit %>
+	</div>
+
+<% end %>

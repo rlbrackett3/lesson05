@@ -1,0 +1,17 @@
+<%= form_for @post do |f| %>
+<%#= form_for :user, url: users_path do |f| %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+  	<%= f.label :text %><br>
+  	<%= f.text_field :text %>
+  </div>
+  <div class="actions">
+  	<%= f.submit %>
+  </div>
+
+<% end %>
