@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	def index
-		@post = Post.all
+		@posts = Post.all # many posts
 	end
 	def new
 		@post = Post.new
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 	def create
 
 		@post = Post.new(post_params)
-		@post.save
+		@post.save # this should be a conditional: if @post.save...end
 		redirect_to post_path(@post)
 		# end
 	end
