@@ -11,7 +11,7 @@
 	  <header id="flash-msg" class="">
     <%= flash[:notice] if flash[:notice] %>
     <%= flash[:alert] if flash[:alert] %>
-
+	<!--the current_user method will only work here if you put it in the application controller -->
 	<h4>Hello: <%= current_user.fullname if current_user %></h4>
 
 	<nav>
