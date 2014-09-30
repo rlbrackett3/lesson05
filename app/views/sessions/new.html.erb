@@ -12,8 +12,7 @@
 		<div class="actions">
 			<%= submit_tag "Sign in", id: "sign-in", name: "sign-in", class: "form_submit", disabled: false, disable_with: "Please wait..."%>
 		</div>
-				<div class="actions">
-			<%= submit_tag "Sign up", id: "sign-up", name: "sign-up", class: "form_submit", disabled: false, disable_with: "Please wait..."%>
-		</div>
+		<!-- only need one submit button to allow the user to sign in and create a session -->
+		<!-- try to avoid too much copy and paste coding as it general creates more mess and confusion -->
 	</fieldset>
 <% end %>	
