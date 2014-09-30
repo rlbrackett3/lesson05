@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	def index
-		@user = User.all
+		@users = User.all #should be plural for context
 
 		# if @users_present?# if current_user #@users_present?
   #         flash[:notice] = "Users present and accounted for."
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     
 		@user = User.new(params[:user])
 		if @user.save
-			@user = session[:user_id] = @user.id
+			# @user = session[:user_id] = @user.id #sessions should be created in the SessionsController
 	
 				flash[:notice] = "Your account was was created successfully"
 			redirect_to user_path(@user)
